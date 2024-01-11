@@ -1,3 +1,4 @@
+# Snake Views
 from django.shortcuts import render
 
 # Snake Data
@@ -15,7 +16,8 @@ snakes = [
         'Species': 'D. polylepis',
         'venom level': 'Highly Venomous',
         'native to': 'sub-Saharan Africa',
-        'natural habitat': 'savannah, woodland'
+        'natural habitat': 'savannah, woodland',
+        'endangered': 'no'
     },
 
     {
@@ -31,7 +33,8 @@ snakes = [
         'Species': 'O. microlepidotus',
         'venom level': 'Most Venomous Snake in the World',
         'native to': 'Goyder Lagoon in north-east South Australia',
-        'natural habitat': 'The black soil plains in the semiarid regions where the Queensland and South Australia borders converge'
+        'natural habitat': 'The black soil plains in the semiarid regions where the Queensland and South Australia borders converge',
+        'endangered': 'no'
     },
 
     {
@@ -46,7 +49,8 @@ snakes = [
         'subfamily': 'Viperinae',
         'venom level': 'Highly Venomous',
         'native to': 'Pakistan, India (in rocky regions of Maharashtra, Rajasthan, Uttar Pradesh, and Punjab) and Sri Lanka, parts of the Middle East, and Africa north of the equator.',
-        'natural habitat': 'sand, rock, soft soil and in scrublands. It is often found hiding under loose rocks'
+        'natural habitat': 'sand, rock, soft soil and in scrublands. It is often found hiding under loose rocks',
+        'endangered': 'no'
     }
 ]
 
