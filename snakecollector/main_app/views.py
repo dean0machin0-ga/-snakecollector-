@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
+# Snake Data
 snakes = [
     {
         'name': 'Black Mamba',
@@ -50,3 +51,13 @@ snakes = [
 ]
 
 # Create your views here.
+def home(request):
+    return render(request, 'home.html')
+
+def about(request):
+    return render(request, 'about.html')
+
+def snakes_index(request):
+    return render(request, 'sankes/index.html', {
+        'snakes': snakes
+    })
