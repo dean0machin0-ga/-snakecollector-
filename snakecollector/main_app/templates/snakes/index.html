@@ -8,10 +8,10 @@
     <div class="card">
         <div class="card-content">
             <span class="card-title">{{ snake.name }}</span>
-            <p>Native to: {{ snake.native to }}</p>
-            <p>Natural Habitat: {{ snake.natural habitat }}</p>
-            <p>Venom Level: {{ snake.venom level }}</p>
-            {% if snake.endangered = yes %}
+            <p>Native to: {{ snake.native_to }}</p>
+            <p>Natural Habitat: {{ snake.natural_habitat }}</p>
+            <p>Venom Level: {{ snake.venom_level }}</p>
+            {% if snake.endangered == 'yes' %}
                 <p>Conservation Status: {{ snake.endangered }}</p>
             {% else %}
                 <p>Conservation Status: Not Endangered</p>
