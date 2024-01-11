@@ -2,22 +2,25 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Snake List</h1>
+<div class="container">
+    <h1 class="mt-4 mb-4">Snake List</h1>
 
-{% for snake in snakes %}
-    <div class="card">
-        <div class="card-content">
-            <span class="card-title">{{ snake.name }}</span>
-            <p>Native to: {{ snake.native_to }}</p>
-            <p>Natural Habitat: {{ snake.natural_habitat }}</p>
-            <p>Venom Level: {{ snake.venom_level }}</p>
-            {% if snake.endangered == 'yes' %}
-                <p>Conservation Status: {{ snake.endangered }}</p>
-            {% else %}
-                <p>Conservation Status: Not Endangered</p>
-            {% endif %}
+    {% for snake in snakes %}
+        <div class="card mb-4">
+            <div class="card-content">
+                <span class="card-title">{{ snake.name }}</span>
+                <p class="mb-2">Native to: {{ snake.native_to }}</p>
+                <p class="mb-2">Natural Habitat: {{ snake.natural_habitat }}</p>
+                <p class="mb-2">Venom Level: {{ snake.venom_level }}</p>
+
+                {% if snake.endangered == 'yes' %}
+                    <p class="mb-0">Conservation Status: {{ snake.endangered }}</p>
+                {% else %}
+                    <p class="mb-0">Conservation Status: Not Endangered</p>
+                {% endif %}
+            </div>
         </div>
-    </div>
-{% endfor %}
+    {% endfor %}
+</div>
 
 {% endblock %}

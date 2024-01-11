@@ -4,8 +4,21 @@ body {
     flex-direction: column;
 }
 
+main.container {
+    background-color: #023310;
+    color: #c3eec4; 
+}
+
 main {
     flex: auto;
+}
+
+nav ul li a {
+    color: #ffffff;
+}
+
+div.nav-wrapper {
+    background-color: #4CAF50;
 }
 
 footer.page-footer {
