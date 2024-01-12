@@ -18,6 +18,11 @@ nav ul li a {
     color: #ffffff;
 }
 
+div.card-body {
+    background-color: #c3eec4;
+    color: #023310;
+}
+
 div.nav-wrapper {
     background-color: #4CAF50;
 }
@@ -26,4 +31,8 @@ footer.page-footer {
     padding-top: 0;
     text-align: right;
     background-color: #4CAF50;
+}
+
+h5 {
+    font-weight: bolder;
 }
