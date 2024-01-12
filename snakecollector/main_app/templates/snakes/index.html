@@ -2,11 +2,11 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<div class="container">
-    <h1 class="mt-4 mb-4">Snake List</h1>
+<div class="container mt-4">
+    <h1 class="mb-4 text-center text-danger">Snake List 🐍</h1>
 
     {% for snake in snakes %}
-        <div class="card mb-4">
+        <div class="card mb-4 border-danger">
             <a href="{% url 'detail' snake.id %}" class="text-decoration-none">
                 <div class="card-body">
                     <h5 class="card-title text-dark font-weight-bold mb-3">
@@ -16,8 +16,8 @@
                     <p class="card-text mb-2 text-dark"><strong>Natural Habitat: </strong>{{ snake.natural_habitat|linebreaks }}</p>
                     <p class="card-text mb-2 text-dark"><strong>Venom Level: </strong>{{ snake.venom_level }}</p>
 
-                    {% if snake.endangered == 'yes' %}
-                        <p class="mb-0 text-dark"><strong>Conservation Status: </strong>{{ snake.endangered }}</p>
+                    {% if snake.endangered %}
+                        <p class="mb-0 text-dark"><strong>Conservation Status: </strong>Yes</p>
                     {% else %}
                         <p class="mb-0 text-dark"><strong>Conservation Status: </strong>Not Endangered</p>
                     {% endif %}

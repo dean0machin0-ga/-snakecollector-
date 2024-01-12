@@ -1,5 +1,6 @@
 # Snake Views
 from django.shortcuts import render
+from django.views.generic import CreateView
 from .models import Snake
 
 # Snake Data
@@ -59,6 +60,7 @@ snakes = [
 ]
 
 # Create your views here.
+
 def home(request):
     return render(request, 'home.html')
 
@@ -80,3 +82,7 @@ def snakes_detail(request, snake_id):
         'snake': snake 
     }
 )
+
+class SnakeCreate(CreateView):
+    model = Snake
+    fields = '__all__'
