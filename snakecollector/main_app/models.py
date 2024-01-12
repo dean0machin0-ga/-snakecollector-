@@ -7,3 +7,6 @@ class Snake(models.Model):
     natural_habitat = models.TextField(max_length=300)
     venom_level = models.CharField(max_length=100)
     endangered = models.BooleanField()
+
+    def __str__(self):
+        return self.name

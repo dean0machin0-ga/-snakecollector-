@@ -2,6 +2,7 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background-color: #023310;
 }
 
 main.container {
@@ -24,4 +25,5 @@ div.nav-wrapper {
 footer.page-footer {
     padding-top: 0;
     text-align: right;
+    background-color: #4CAF50;
 }
