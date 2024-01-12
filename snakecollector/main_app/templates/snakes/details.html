@@ -1,0 +1,26 @@
+<!-- Snake Deatil -->
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+    <h1 class="mt-4 mb-4">Snake Details</h1>
+
+    <div class="card mb-4">
+        <div class="card-body">
+            <h5 class="card-title text-dark font-weight-bold mb-3">
+                <u>{{ snake.name }}</u>
+            </h5>
+            <p class="card-text mb-2 text-dark"><strong>Native to: </strong>{{ snake.native_to|linebreaks }}</p>
+            <p class="card-text mb-2 text-dark"><strong>Natural Habitat: </strong>{{ snake.natural_habitat|linebreaks }}</p>
+            <p class="card-text mb-2 text-dark"><strong>Venom Level: </strong>{{ snake.venom_level }}</p>
+
+            {% if snake.endangered == 'yes' %}
+                <p class="mb-0 text-dark"><strong>Conservation Status: </strong>{{ snake.endangered }}</p>
+            {% else %}
+                <p class="mb-0 text-dark"><strong>Conservation Status: </strong>Not Endangered</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

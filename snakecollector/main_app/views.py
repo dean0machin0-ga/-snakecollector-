@@ -72,7 +72,7 @@ def snakes_index(request):
 
 def snakes_detail(request, snake_id):
     snake = Snake.objects.get(id=snake_id)
-    return render(request, 'snakes/detail.html',
+    return render(request, 'snakes/details.html',
     {
         'snake': snake 
     }
