@@ -69,3 +69,11 @@ def snakes_index(request):
         'snakes': snakes
     }
 )
+
+def snakes_detail(request, snake_id):
+    snake = Snake.objects.get(id=snake_id)
+    return render(request, 'snakes/detail.html',
+    {
+        'snake': snake 
+    }
+)
