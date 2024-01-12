@@ -12,6 +12,7 @@
             </h5>
             <p class="card-text mb-2 text-dark"><strong>Native to: </strong>{{ snake.native_to|linebreaks }}</p>
             <p class="card-text mb-2 text-dark"><strong>Natural Habitat: </strong>{{ snake.natural_habitat|linebreaks }}</p>
+            <p class="card-text mb-2 text-dark"><strong>Diet: </strong>{{ snake.diet|linebreaks }}</p>
             <p class="card-text mb-2 text-dark"><strong>Venom Level: </strong>{{ snake.venom_level }}</p>
 
             {% if snake.endangered == 'yes' %}
