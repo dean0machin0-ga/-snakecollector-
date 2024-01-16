@@ -1,7 +1,7 @@
 <!-- Snakes Index -->
 {% extends 'base.html' %}
-{% block content %}
 
+{% block content %}
 <div class="container mt-4">
     <h1 class="mb-4 text-center text-danger">Snake List 🐍</h1>
 
@@ -15,16 +15,9 @@
                     <p class="card-text mb-2 text-dark"><strong>Native to: </strong>{{ snake.native_to|linebreaks }}</p>
                     <p class="card-text mb-2 text-dark"><strong>Natural Habitat: </strong>{{ snake.natural_habitat|linebreaks }}</p>
                     <p class="card-text mb-2 text-dark"><strong>Venom Level: </strong>{{ snake.venom_level }}</p>
-
-                    <!-- {% if snake.endangered %}
-                        <p class="mb-0 text-dark"><strong>Conservation Status: </strong>Yes</p>
-                    {% else %}
-                        <p class="mb-0 text-dark"><strong>Conservation Status: </strong>Not Endangered</p>
-                    {% endif %} -->
                 </div>
             </a>
         </div>
     {% endfor %}
 </div>
-
 {% endblock %}

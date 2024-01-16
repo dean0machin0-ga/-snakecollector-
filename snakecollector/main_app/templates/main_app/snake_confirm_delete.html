@@ -1,0 +1,14 @@
+<!-- Delete Form -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class = "text-center text-danger">Delete Snake 🐍</h1>
+
+    <h4>Are you sure you want to delete this snake <span class="text-danger">{{ object.name }}</span>?</h4>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="submit" value="Delete 🐍" class="btn btn-danger" style="background-color: #4CAF50; color: #fff;">
+        <a href="{% url 'detail' snake.id %}" class="green-text">Cancel</a>
+    </form>
+{% endblock %}

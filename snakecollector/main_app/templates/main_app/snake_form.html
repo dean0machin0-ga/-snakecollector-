@@ -1,39 +1,45 @@
+<!-- Snake Forms -->
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="container mt-4">
+<div class="container mt-4">
+    {% if object %}
+        <h1 class = "text-center text-danger">{{object.name}}</h1>
+    {% else %}
         <h1 class="text-center text-danger">Add Snake 🐍</h1>
-        <form action="" method="POST" class="mt-4">
-            {% csrf_token %}
-            <div class="row justify-content-center">
-                <div class="col-md-12">
-                    <div class="card border-danger">
-                        <div class="card-body">
-                            <div class="mb-3">
-                                <label for="{{ form.name.id }}" class="form-label h5">Snake Name</label>
-                                {{ form.name }}
-                            </div>
-                            <div class="mb-3">
-                                <label for="{{ form.native_to.id }}" class="form-label h5">Native To</label>
-                                {{ form.native_to }}
-                            </div>
-                            <div class="mb-3">
-                                <label for="{{ form.natural_habitat.id }}" class="form-label h5">Natural Habitat</label>
-                                {{ form.natural_habitat }}
-                            </div>
-                            <div class="mb-3">
-                                <label for="{{ form.diet.id }}" class="form-label h5">Diet</label>
-                                {{ form.diet }}
-                            </div>
-                            <div class="mb-3">
-                                <label for="{{ form.venom_level.id }}" class="form-label h5">Venom Level</label>
-                                {{ form.venom_level }}
-                            </div>
-                            <button type="submit" class="btn btn-danger" style="background-color: #4CAF50; color: #fff;">Submit</button>
+    {% endif %}
+
+    <form action="" method="POST" class="mt-4">
+        {% csrf_token %}
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="card border-danger">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="{{ form.name.id }}" class="form-label h5">Snake Name</label>
+                            {{ form.name }}
                         </div>
+                        <div class="mb-3">
+                            <label for="{{ form.native_to.id }}" class="form-label h5">Native To</label>
+                            {{ form.native_to }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="{{ form.natural_habitat.id }}" class="form-label h5">Natural Habitat</label>
+                            {{ form.natural_habitat }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="{{ form.diet.id }}" class="form-label h5">Diet</label>
+                            {{ form.diet }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="{{ form.venom_level.id }}" class="form-label h5">Venom Level</label>
+                            {{ form.venom_level }}
+                        </div>
+                        <button type="submit" class="btn btn-danger" style="background-color: #4CAF50; color: #fff;">Submit</button>
                     </div>
                 </div>
             </div>
-        </form>
-    </div>
+        </div>
+    </form>
+</div>
 {% endblock %}
