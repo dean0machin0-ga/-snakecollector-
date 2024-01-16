@@ -14,12 +14,6 @@
             <p class="card-text mb-2 text-dark"><strong>Natural Habitat: </strong>{{ snake.natural_habitat|linebreaks }}</p>
             <p class="card-text mb-2 text-dark"><strong>Diet: </strong>{{ snake.diet|linebreaks }}</p>
             <p class="card-text mb-2 text-dark"><strong>Venom Level: </strong>{{ snake.venom_level }}</p>
-
-            {% if snake.endangered %}
-                <p class="mb-0 text-dark"><strong>Conservation Status: </strong>Yes</p>
-            {% else %}
-                <p class="mb-0 text-dark"><strong>Conservation Status: </strong>Not Endangered</p>
-            {% endif %}
         </div>
     </div>
 </div>

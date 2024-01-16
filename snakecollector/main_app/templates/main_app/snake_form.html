@@ -6,34 +6,28 @@
         <form action="" method="POST" class="mt-4">
             {% csrf_token %}
             <div class="row justify-content-center">
-                <div class="col-md-8">
+                <div class="col-md-12">
                     <div class="card border-danger">
                         <div class="card-body">
-                            {{ form.non_field_errors }}
                             <div class="mb-3">
                                 <label for="{{ form.name.id }}" class="form-label h5">Snake Name</label>
                                 {{ form.name }}
-                                {{ form.name.errors }}
                             </div>
                             <div class="mb-3">
                                 <label for="{{ form.native_to.id }}" class="form-label h5">Native To</label>
                                 {{ form.native_to }}
-                                {{ form.native_to.errors }}
                             </div>
                             <div class="mb-3">
                                 <label for="{{ form.natural_habitat.id }}" class="form-label h5">Natural Habitat</label>
                                 {{ form.natural_habitat }}
-                                {{ form.natural_habitat.errors }}
+                            </div>
+                            <div class="mb-3">
+                                <label for="{{ form.diet.id }}" class="form-label h5">Diet</label>
+                                {{ form.diet }}
                             </div>
                             <div class="mb-3">
                                 <label for="{{ form.venom_level.id }}" class="form-label h5">Venom Level</label>
                                 {{ form.venom_level }}
-                                {{ form.venom_level.errors }}
-                            </div>
-                            <div class="mb-3">
-                                {{ form.endangered }}
-                                <label class="form-check-label h5" for="{{ form.endangered.id }}">Endangered</label>
-                                {{ form.endangered.errors }}
                             </div>
                             <button type="submit" class="btn btn-danger" style="background-color: #4CAF50; color: #fff;">Submit</button>
                         </div>
