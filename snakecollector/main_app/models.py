@@ -6,7 +6,7 @@ class Snake(models.Model):
     name = models.CharField(max_length=100)
     native_to = models.TextField(max_length=300)
     natural_habitat = models.TextField(max_length=300)
-    diet = models.TextField(max_length=125, default='Food')
+    diet = models.TextField(max_length=125, default='')
     venom_level = models.CharField(max_length=100)
     endangered = models.BooleanField(default=False)
 

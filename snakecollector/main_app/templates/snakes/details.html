@@ -15,6 +15,10 @@
             <p class="card-text mb-2 text-dark"><strong>Diet: </strong>{{ snake.diet|linebreaks }}</p>
             <p class="card-text mb-2 text-dark"><strong>Venom Level: </strong>{{ snake.venom_level }}</p>
         </div>
+        <div class="card-action">
+            <a href="{% url 'snakes_update' snake.id %}">Edit</a>
+            <a href="{% url 'snakes_delete' snake.id %}">Delete</a>
+        </div>
     </div>
 </div>
 

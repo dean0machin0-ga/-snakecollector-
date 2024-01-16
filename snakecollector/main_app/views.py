@@ -1,6 +1,6 @@
 # Snake Views
 from django.shortcuts import render
-from django.views.generic import CreateView
+from django.views.generic import CreateView, UpdateView, DeleteView
 from .models import Snake
 
 # Snake Data
@@ -84,3 +84,13 @@ def snakes_detail(request, snake_id):
 class SnakeCreate(CreateView):
     model = Snake
     fields = ['name', 'native_to', 'natural_habitat', 'diet', 'venom_level']
+
+# Snake Update
+class SnakeUpdate(UpdateView):
+    model = Snake
+    fields = ['native_to', 'natural_habitat', 'diet', 'venom_level']
+
+#  Snake Delete
+class SnakeDelete(DeleteView):
+    model = Snake
+    success_url = '/snakes'
